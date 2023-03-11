@@ -1,0 +1,76 @@
+<div class="container" align="right">
+    <legend>إضافة صنف</legend>
+    <form>
+      <div >
+        
+        <input type="text" name="name" [(ngModel)] = "articleForm.name"  id="txtName" />
+        <label for="txtName"  >البيان باللاتيني </label>
+    </div>
+
+      <div class="mb-3">
+        <input type="text" name="namear" [(ngModel)] = "articleForm.namear"  id="txtNamear" />
+        <label for="txtName"  >البيان بالعربي</label>
+    </div>
+    <div>
+      <div class="mb-3" style="width:300px; float:left;">        
+        <select name="category" [(ngModel)] = "articleForm.category" id="txtcategory">
+            <option value=""></option>
+            <option value="oral"> الأدوية الفموية </option>
+            <option value="picures"> الأدوية عن طريق الحقن </option>
+        </select>
+        <label for="txtcategory" class="form-label">التصنيف</label>
+    </div>
+
+    <div class="mb-3" style="width:300px; float:right;">
+        <select name="type" [(ngModel)] = "articleForm.type"  id="txttype">
+            <option value=""></option>
+            <option value="A"> A </option>
+            <option value="B"> B </option>
+        </select>
+
+
+        <label for="txttype" class="form-label">الفئة</label>
+    </div>
+    </div>
+
+<br>
+      <div class="mb-3">
+        <label for="txtunit" class="form-label">unit</label>
+        <input type="text" name="unit" [(ngModel)] = "articleForm.unit" class="form-control" id="txtunit" />
+      </div>
+
+      <div class="mb-3">
+        <label for="txtserial" class="form-label">serial</label>
+        <input type="text" name="serial" [(ngModel)] = "articleForm.serial" class="form-control" id="txtserial" />
+      </div>
+
+
+
+      <div class="mb-3">
+        <label for="txtqmax" class="form-label">qmax</label>
+        <input type="text" name="qmax" [(ngModel)] = "articleForm.qmax" class="form-control" id="txtqmax" />
+      </div>
+      
+      <div class="mb-3">
+        <label for="txtvolume" class="form-label">volume</label>
+        <input type="text" name="volume" [(ngModel)] = "articleForm.volume" class="form-control" id="txtvolume" />
+      </div>      
+
+      <div class="mb-3">
+        <label for="txtremarks" class="form-label">remarks</label>
+        <input type="text" name="remarks" [(ngModel)] = "articleForm.remarks" class="form-control" id="txtremarks" />
+      </div>   
+
+      <div class="mb-3">
+        <label for="txtstock" class="form-label">stock</label>
+        <input type="checkbox" name="stock" [(ngModel)] = "articleForm.stock" class="form-control" id="txtstock" />
+      </div>  
+
+      <div class="mb-3">
+        <label for="txtused" class="form-label">used</label>
+        <input type="checkbox" name="used" [(ngModel)] = "articleForm.used" class="form-control" id="txtused" />
+      </div> 
+
+      <button type="button" (click)="create()" class="btn btn-primary">Create</button>
+    </form>
+  </div>
