@@ -34,28 +34,55 @@
     </div>
 
 <br>
-      <div class="mb-3">
-        <label for="txtunit" class="form-label">unit</label>
-        <input type="text" name="unit" [(ngModel)] = "articleForm.unit" class="form-control" id="txtunit" />
+<div>
+      <div class="mb-3"  style="width:300px; float:left;">
+
+        <select  name="unit" [(ngModel)] = "articleForm.unit"  id="txtunit">
+            <option value=""></option>
+            <option value="oral"> الأدوية الفموية </option>
+            <option value="picures"> الأدوية عن طريق الحقن </option>
+        </select>
+
+
+        <label for="txtunit" class="form-label">الوحدة</label>
+
       </div>
 
-      <div class="mb-3">
-        <label for="txtserial" class="form-label">serial</label>
+      <div class="mb-3" style="width:300px; float:right;">
+        
+        <input type="text" name="qmax" [(ngModel)] = "articleForm.qmax" id="txtqmax" />
+        <label for="txtqmax" class="form-label">الكمية القصوى</label>
+
+      </div>
+
+    </div>
+<br><br>
+
+
+<div>
+    <div class="mb-3"  style="width:300px; float:left;">
+
+
         <input type="text" name="serial" [(ngModel)] = "articleForm.serial" class="form-control" id="txtserial" />
-      </div>
+
+        <label for="txtserial" class="form-label">رقم التشغيلة</label>
 
 
-
-      <div class="mb-3">
-        <label for="txtqmax" class="form-label">qmax</label>
-        <input type="text" name="qmax" [(ngModel)] = "articleForm.qmax" class="form-control" id="txtqmax" />
-      </div>
+    </div>
       
-      <div class="mb-3">
-        <label for="txtvolume" class="form-label">volume</label>
+    <div class="mb-3" style="width:300px; float:right;">
+
+        <select  name="volume" [(ngModel)] = "articleForm.volume" class="form-control" id="txtvolume">
+            <option value=""></option>
+            <option value="comprime"> أقراص دوائية </option>
+            <option value="solution"> المزوات </option>
+        </select>
+
+
+        <label for="txtvolume" class="form-label">التعبئة</label>
         <input type="text" name="volume" [(ngModel)] = "articleForm.volume" class="form-control" id="txtvolume" />
       </div>      
-
+</div>
       <div class="mb-3">
         <label for="txtremarks" class="form-label">remarks</label>
         <input type="text" name="remarks" [(ngModel)] = "articleForm.remarks" class="form-control" id="txtremarks" />
